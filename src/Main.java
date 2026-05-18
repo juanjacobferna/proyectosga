@@ -58,7 +58,7 @@ public class Main {
                         String idBusqueda = scanner.nextLine();
                         Estudiante est = sistema.buscarEstudiante(idBusqueda);
                         if (est != null) {
-                            est.mostrarInformation(); // Llama al método polimórfico
+                           est.mostrarInformacion(); // Llama al método polimórfico
                         } else {
                             System.out.println("Error: Estudiante no encontrado.");
                         }
