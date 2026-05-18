@@ -70,7 +70,7 @@ public class SistemaGCA {
             while ((linea = br.readLine()) != null) {
                 if (primeraLinea) { // Ignorar cabecera
                     primeraLinea = false;
-                     Kaliman: continue;
+                      continue;
                 }
                 
                 String[] datos = linea.split(",");
