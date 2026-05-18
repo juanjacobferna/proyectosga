@@ -156,19 +156,39 @@ public class Main {
     /**
      * Llena el sistema con datos iniciales para asegurar que funcione desde la primera corrida.
      */
-    private static void inicializarDatosPorDefecto(SistemaGCA sistema) {
-        // Registrar materias base si la lista está vacía
-        if (sistema.buscarMateria("MAT101") == null) {
-            sistema.registrarMateria(new Materia("MAT101", "Cálculo Diferencial", 3, 4));
-            sistema.registrarMateria(new Materia("INF101", "Introducción a la Programación", 2, 3));
-            sistema.registrarMateria(new Materia("INF202", "Estructuras de Datos", 1, 4));
-        }
-        
-        // Registrar aulas en el TreeMap (se ordenan por capacidad de manera interna)
-        if (sistema.getMapaAulas().isEmpty()) {
-            sistema.registrarAula(new Aula("Aula 101", 30));
-            sistema.registrarAula(new Aula("Lab Informática B", 15));
-            sistema.registrarAula(new Aula("Auditorio Central", 150));
-        }
-    }
+   private static void inicializarDatosPorDefecto(SistemaGCA sistema) {
+    // Registrar materias base para que el sistema tenga donde matricular
+    sistema.registrarMateria(new Materia("INF202", "Estructuras de Datos", 3, 4));
+    sistema.registrarMateria(new Materia("INF101", "Introducción a la Programación", 2, 3));
+    sistema.registrarMateria(new Materia("MAT101", "Cálculo Diferencial", 1, 4));
+
+    // Registrar aulas base de prueba
+    sistema.registrarAula(new Aula("Aula 101", 30));
+    sistema.registrarAula(new Aula("Lab Informática B", 15));
+
+    // --- INYECCIÓN DIRECTA DE LOS 20 ESTUDIANTES REQUERIDOS ---
+    sistema.registrarEstudiante(new Estudiante("Juan Jacob Lopez Fernández", "2124242", "juan@u.edu.co", 1));
+    sistema.registrarEstudiante(new Estudiante("Carlos Andrés Pérez Ospina", "1005123", "carlos@u.edu.co", 1));
+    sistema.registrarEstudiante(new Estudiante("María Camila Torres Buendía", "1005456", "maria@u.edu.co", 1));
+    sistema.registrarEstudiante(new Estudiante("Andrés Felipe Beltrán Ruiz", "1005789", "andres@u.edu.co", 1));
+    sistema.registrarEstudiante(new Estudiante("Diana Marcela Gómez Castro", "1006111", "diana@u.edu.co", 1));
+    sistema.registrarEstudiante(new Estudiante("Santiago Alejandro Muñoz Marín", "1006222", "santiago@u.edu.co", 1));
+    sistema.registrarEstudiante(new Estudiante("Valentina Sofía Erazo Córdoba", "1006333", "valentina@u.edu.co", 1));
+    sistema.registrarEstudiante(new Estudiante("Mateo Nicolás Delgado Ortiz", "1006444", "mateo@u.edu.co", 1));
+    sistema.registrarEstudiante(new Estudiante("Isabella Rose Gómez Hurtado", "1006555", "isabella@u.edu.co", 1));
+    sistema.registrarEstudiante(new Estudiante("Juan Diego Palacios Vivas", "1006666", "juand@u.edu.co", 1));
+    sistema.registrarEstudiante(new Estudiante("Mariana Lucía Rojas Benavides", "1006777", "mariana@u.edu.co", 1));
+    sistema.registrarEstudiante(new Estudiante("Kevin Alberto Restrepo Solano", "1006888", "kevin@u.edu.co", 1));
+    sistema.registrarEstudiante(new Estudiante("Laura Daniela Caicedo Peña", "1006999", "laura@u.edu.co", 1));
+    sistema.registrarEstudiante(new Estudiante("Sebastián Camilo Murillo Paz", "1007112", "sebastian@u.edu.co", 1));
+    sistema.registrarEstudiante(new Estudiante("Valeria Alexandra Mina Castillo", "1007223", "valeria@u.edu.co", 1));
+    sistema.registrarEstudiante(new Estudiante("Daniel Fernando Angulo Tenorio", "1007334", "daniel@u.edu.co", 1));
+    sistema.registrarEstudiante(new Estudiante("Natalia María Suárez Vargas", "1007445", "natalia@u.edu.co", 1));
+    sistema.registrarEstudiante(new Estudiante("Alejandro José Borrero Navia", "1007556", "alejandro@u.edu.co", 1));
+    sistema.registrarEstudiante(new Estudiante("Gabriela Estefanía Cifuentes Saa", "1007667", "gabriela@u.edu.co", 1));
+    sistema.registrarEstudiante(new Estudiante("Jhan Carlos Hinestroza Mosquera", "1007778", "jhan@u.edu.co", 1));
 }
+
+}
+
+
